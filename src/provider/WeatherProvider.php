@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sunsgne\Provider;
+namespace Sunsgne\Weather\Provider;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
@@ -40,6 +40,7 @@ class WeatherProvider
     public function __construct(string $key)
     {
         $this->key  = $key;
+        var_dump(1);
         $this->city = $this->getClientIp(request()->getRealIp())["city"];
     }
 
@@ -67,7 +68,7 @@ class WeatherProvider
      * @throws GuzzleException
      * @author sunsgne
      */
-    public function liveWeather(string $city, string $format = 'json')
+    public function liveWeather(string $city, string $format = 'json'): mixed
     {
         return $this->getWeather($city, 'base', $format);
     }

@@ -1,14 +1,22 @@
 <?php
 
-namespace Sunsgne;
+namespace Sunsgne\Weather;
 
-use Sunsgne\provider\WeatherProvider;
+use GuzzleHttp\Exception\GuzzleException;
+use Sunsgne\Weather\Provider\WeatherProvider;
 use Webman\Bootstrap;
 use Workerman\Worker;
 /**
  * @purpose
  * @date 2022/5/16
  * @author zhulianyou
+ */
+
+/**
+ * @see \Sunsgne\Weather\provider\WeatherProvider
+ * @mixin Weather
+ * @method static liveWeather(string $name = "") 实况天气数据信息
+ * @method static forecastsWeather(string $name = "") 预报天气信息数据
  */
 class Weather implements Bootstrap
 {
@@ -27,11 +35,7 @@ class Weather implements Bootstrap
     public static function start($worker)
     {
         if ($worker) {
-            $config = [
-                    'key' => '	1d7ac8e98d6254dd78501c27a02ede45'
-            ];
-//            $config = config('plugin.tinywan.weather.app.weather');
-            static::$_provider = new WeatherProvider($config['key']);
+            static::$_provider = new WeatherProvider("1d7ac8e98d6254dd78501c27a02ede45");
         }
     }
 
