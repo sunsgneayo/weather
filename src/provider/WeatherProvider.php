@@ -1,12 +1,14 @@
 <?php
 
 declare(strict_types=1);
+
 namespace Sunsgne\Provider;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Sunsgne\Exception\HttpException;
 use Sunsgne\Exception\InvalidArgumentException;
+
 /**
  * @purpose
  * @date 2022/5/16
@@ -37,8 +39,8 @@ class WeatherProvider
      */
     public function __construct(string $key)
     {
-        $this->key = $key;
-        $this->city = $this->getClientIp(request()->getRealIp());
+        $this->key  = $key;
+        $this->city = $this->getClientIp(request()->getRealIp())["city"];
     }
 
     /**
@@ -90,24 +92,24 @@ class WeatherProvider
      * @return mixed|string
      * @throws GuzzleException
      */
-    public function getWeather(string $city, string $type = 'base', string $format = 'json')
+    public function getWeather(string $type = 'base', string $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
         if (!\in_array(\strtolower($format), ['xml', 'json'])) {
-            throw new InvalidArgumentException('Invalid response format: '.$format);
+            throw new InvalidArgumentException('Invalid response format: ' . $format);
         }
 
         if (!\in_array(\strtolower($type), ['base', 'all'])) {
-            throw new InvalidArgumentException('Invalid type value(base/all): '.$type);
+            throw new InvalidArgumentException('Invalid type value(base/all): ' . $type);
         }
 
         $format = \strtolower($format);
-        $type = \strtolower($type);
+        $type   = \strtolower($type);
 
         $query = array_filter([
-            'key' => $this->key,
-            'city' => $city,
-            'output' => $format,
+            'key'        => $this->key,
+            'city'       => $this->city,
+            'output'     => $format,
             'extensions' => $type,
         ]);
 
