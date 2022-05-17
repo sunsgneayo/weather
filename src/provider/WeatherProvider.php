@@ -68,9 +68,10 @@ class WeatherProvider
      * @throws GuzzleException
      * @author sunsgne
      */
-    public function liveWeather(string $city, string $format = 'json')
+    public function liveWeather(string $ip, string $format = 'json')
     {
-        return $this->getWeather($city, 'base', $format);
+        $this->city = $this->getClientIp($ip)["city"];
+        return $this->getWeather('base', $format);
     }
 
     /**
@@ -81,9 +82,10 @@ class WeatherProvider
      * @throws GuzzleException
      * @author sunsgne
      */
-    public function forecastsWeather(string $city, string $format = 'json')
+    public function forecastsWeather(string $ip, string $format = 'json')
     {
-        return $this->getWeather($city, 'all', $format);
+        $this->city = $this->getClientIp($ip)["city"];
+        return $this->getWeather('all', $format);
     }
 
     /**
