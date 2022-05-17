@@ -1,19 +1,13 @@
 <?php
+declare(strict_types=1);
+namespace sunsgne;
 
-namespace Sunsgne\Weather;
-
-use GuzzleHttp\Exception\GuzzleException;
-use Sunsgne\Weather\Provider\WeatherProvider;
+use sunsgne\provider\WeatherProvider;
 use Webman\Bootstrap;
 use Workerman\Worker;
-/**
- * @purpose
- * @date 2022/5/16
- * @author zhulianyou
- */
 
 /**
- * @see \Sunsgne\Weather\provider\WeatherProvider
+ * @see WeatherProvider
  * @mixin Weather
  * @method static liveWeather(string $name = "") 实况天气数据信息
  * @method static forecastsWeather(string $name = "") 预报天气信息数据

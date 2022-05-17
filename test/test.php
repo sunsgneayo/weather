@@ -1,7 +1,10 @@
 <?php
+
+use sunsgne\Weather;
+
 require_once './vendor/autoload.php';
 
 
-$response = \Sunsgne\Weather\Weather::liveWeather();
+$response = Weather::liveWeather();
 
 var_dump($response);

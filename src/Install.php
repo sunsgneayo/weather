@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunsgne;
+namespace sunsgne;
 
 /**
  * @purpose

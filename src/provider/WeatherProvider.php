@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sunsgne\Weather\Provider;
+namespace sunsgne\provider;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Sunsgne\Exception\HttpException;
-use Sunsgne\Exception\InvalidArgumentException;
+use sunsgne\Exception\HttpException;
+use sunsgne\Exception\InvalidArgumentException;
 
 /**
  * @purpose

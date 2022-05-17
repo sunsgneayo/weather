@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunsgne\Exception;
+namespace sunsgne\Exception;
 /**
  * @purpose
  * @date 2022/5/16

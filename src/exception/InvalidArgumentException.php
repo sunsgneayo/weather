@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunsgne\Exception;
+namespace sunsgne\Exception;
 
 /**
  * @purpose
