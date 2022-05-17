@@ -1,4 +1,4 @@
 <?php
 return [
-    \tinywan\Weather::class
+    \sunsgne\Weather::class
 ];
