@@ -12,6 +12,7 @@ use Workerman\Worker;
  * @mixin Weather
  * @method static liveWeather(string $ip = "") 实况天气数据信息
  * @method static forecastsWeather(string $ip = "") 预报天气信息数据
+ * @method static getClientCityByIp(string $ip = "") 省份城市数据
  */
 class Weather implements Bootstrap
 {

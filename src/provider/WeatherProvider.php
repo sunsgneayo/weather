@@ -67,7 +67,7 @@ class WeatherProvider
      */
     public function liveWeather(string $ip, string $format = 'json')
     {
-        $this->city = $this->getClientIp($ip)["city"];
+        $this->city = $this->getClientCityByIp($ip)["city"];
         return $this->getWeather('base', $format);
     }
 
@@ -81,7 +81,7 @@ class WeatherProvider
      */
     public function forecastsWeather(string $ip, string $format = 'json')
     {
-        $this->city = $this->getClientIp($ip)["city"];
+        $this->city = $this->getClientCityByIp($ip)["city"];
         return $this->getWeather('all', $format);
     }
 
@@ -131,7 +131,7 @@ class WeatherProvider
      * @datetime 2022/5/16 17:58
      * @author zhulianyou
      */
-    public function getClientIp(string $ip, string $type = 'base', string $format = 'json')
+    public function getClientCityByIp(string $ip, string $type = 'base', string $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/ip';
         if (!\in_array(\strtolower($format), ['xml', 'json'])) {
