@@ -5,6 +5,8 @@
 
 
 //$response = \tinywan\Weather::liveWeather("重庆");
-$response = \sunsgne\Weather::liveWeather("重庆");
+use sunsgne\Weather;
+
+$response = Weather::liveWeather("重庆");
 
 var_dump($response);
