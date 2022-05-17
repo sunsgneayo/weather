@@ -1,10 +1,10 @@
 <?php
 
-use sunsgne\Weather;
 
 require_once './vendor/autoload.php';
 
 
-$response = Weather::liveWeather();
+//$response = \tinywan\Weather::liveWeather("重庆");
+$response = sunsgne\Weather::liveWeather("重庆");
 
 var_dump($response);

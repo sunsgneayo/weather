@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f66465f40de81aaff7434f19ecdf1dc2",
+    "content-hash": "7e94e10c839813c6bfd569e55ace52b2",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "82ca75f0b1f130f018febdda29af13086da5dbac"
+                "reference": "b720a2d0ff4a135ee0ef542082b2b979ff1f1d14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/82ca75f0b1f130f018febdda29af13086da5dbac",
-                "reference": "82ca75f0b1f130f018febdda29af13086da5dbac",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b720a2d0ff4a135ee0ef542082b2b979ff1f1d14",
+                "reference": "b720a2d0ff4a135ee0ef542082b2b979ff1f1d14",
                 "shasum": ""
             },
             "require": {
@@ -129,7 +129,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T14:21:21+00:00"
+            "time": "2022-05-16T15:07:31+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2835,6 +2835,58 @@
                 }
             ],
             "time": "2021-07-28T10:34:58+00:00"
+        },
+        {
+            "name": "tinywan/weather",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Tinywan/webman-weather.git",
+                "reference": "a9057a647b391b91a6a4378d5272a902d7338b81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Tinywan/webman-weather/zipball/a9057a647b391b91a6a4378d5272a902d7338b81",
+                "reference": "a9057a647b391b91a6a4378d5272a902d7338b81",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.5|^7.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7.0|~8.0|~9.0",
+                "workerman/webman": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tinywan\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tinywan",
+                    "email": "756684177@qq.com"
+                }
+            ],
+            "description": "the GaoDe weather for webman plugin",
+            "keywords": [
+                "gaode",
+                "plugin",
+                "weather",
+                "webman"
+            ],
+            "support": {
+                "issues": "https://github.com/Tinywan/webman-weather/issues",
+                "source": "https://github.com/Tinywan/webman-weather/tree/v0.0.1"
+            },
+            "time": "2022-04-12T12:27:30+00:00"
         },
         {
             "name": "webmozart/assert",

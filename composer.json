@@ -22,6 +22,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0|~8.0|~9.0",
-        "workerman/webman": "^1.0"
+        "workerman/webman": "^1.0",
+        "tinywan/weather": "^0.0.1"
     }
 }

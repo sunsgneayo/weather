@@ -68,7 +68,7 @@ class WeatherProvider
      * @throws GuzzleException
      * @author sunsgne
      */
-    public function liveWeather(string $city, string $format = 'json'): mixed
+    public function liveWeather(string $city, string $format = 'json')
     {
         return $this->getWeather($city, 'base', $format);
     }
@@ -87,7 +87,6 @@ class WeatherProvider
     }
 
     /**
-     * @param string $city
      * @param string $type
      * @param string $format
      * @return mixed|string
