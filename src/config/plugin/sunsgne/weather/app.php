@@ -2,6 +2,6 @@
 return [
     'enable' => true,
     'weather' => [
-        'key' => 'e03d436430a85046ec3930aed0f3d0d4'
+        'key' => '1d7ac8e98d6254dd78501c27a02ede45'
     ],
 ];

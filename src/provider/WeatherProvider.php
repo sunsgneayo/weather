@@ -35,13 +35,10 @@ class WeatherProvider
 
     /**
      * @param string $key
-     * @throws GuzzleException
      */
     public function __construct(string $key)
     {
         $this->key  = $key;
-        var_dump(1);
-        $this->city = $this->getClientIp(request()->getRealIp())["city"];
     }
 
     /**

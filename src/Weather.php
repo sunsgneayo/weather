@@ -30,7 +30,8 @@ class Weather implements Bootstrap
     public static function start($worker)
     {
         if ($worker) {
-            static::$_provider = new WeatherProvider("1d7ac8e98d6254dd78501c27a02ede45");
+            $config = config('plugin.sunsgne.weather.app.weather');
+            static::$_provider = new WeatherProvider($config['key']);
         }
     }
 
