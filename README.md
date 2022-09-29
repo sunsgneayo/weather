@@ -27,6 +27,7 @@ $clientIp = $request->getRealIp();
 sunsgne\Weather::getClientCityByIp($clientIp);
 ```
 #### 响应
+
 ```php
 array(7) {     
   ["status"]=> 
@@ -48,12 +49,14 @@ array(7) {
 ```
 
 ### 实时天气
+
 ```php
 $clientIp = $request->getRealIp();
 sunsgne\Weather::liveWeather($clientIp);
 ```
 
 ### 预报天气
+
 ```php
 $clientIp = $request->getRealIp();
 sunsgne\Weather::forecastsWeather($clientIp);
